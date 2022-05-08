@@ -2,7 +2,7 @@
 <img align="right" src="./sage.svg" height="169"> 
 Port scan is a technique used to identify the status of a port in a network, we usually use this for analisys and understand a target network.
 
-<h3><br>  Wait... what is TCP? </br> </h3>
+<h3><br>  Wait... what is TCP? :exploding_head: </br> </h3>
 <p>
 TCP means Transmission Control Protocol, the predominant
 standard for connection-oriented, reliable communications and

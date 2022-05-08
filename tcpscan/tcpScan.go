@@ -3,6 +3,8 @@ package tcpscan
 import (
 	"fmt"
 	"net"
+	"os"
+	"strconv"
 )
 
 func worker(ports, results chan int, addressInput string) {
@@ -57,4 +59,17 @@ func TcpScan(workersQuantity int, portsQuantity int, addressInput string) []int 
 
 }
 
+func PortsToTxt(portsList []int, url string) {
+	f, err := os.Create("ports.txt")
 
+	if err != nil {
+		fmt.Println("Error creating the file: ", err)
+	}
+
+	f.WriteString(url + "\n")
+	for _, port := range portsList {
+		txt := strconv.Itoa(port) + "\n"
+		f.WriteString(txt)
+	}
+	fmt.Println("File with open ports list created. Name: ports.txt")
+}
